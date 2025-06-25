@@ -1,0 +1,63 @@
+# dependencies
+**/node_modules
+
+# testing
+/coverage
+
+# next.js
+**/.next/
+**/out/
+
+# Firebase
+**/.firebase/
+ui-debug.log
+firebase-debug.log
+firestore-debug.log
+pubsub-debug.log
+**/.packages/
+
+# misc
+.DS_Store
+*.pem
+
+# secrets
+.env
+.secret.local
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# cursor
+*assistant_snippet_*.txt
+
+# types
+types/**/*.js
+types/**/*.js.map
+types/**/*.d.ts
+types/jest.config.js
+
+# shire
+shire/firebase-service-account.json
+shire/**/*.js
+shire/**/*.js.map
+
+# sentry
+mordor/.env.sentry-build-plugin
+
+# google service account
+service-account*
+
+# secrets
+.secrets
+
+# auth proxy
+*/cloud-sql-proxy
+alloydb-auth-proxy
+
+# python
+__pycache__
+
+# test data
+test-data
+*/test-data
