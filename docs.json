@@ -15,8 +15,7 @@
           "pages": [
             "index",
             "introduction",
-            "quick-start",
-            "api-reference/introduction"
+            "quick-start"
           ]
         }
       ]
