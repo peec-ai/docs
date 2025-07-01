@@ -9,21 +9,19 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "groups": [
-      {
-        "group": "Getting Started",
-        "pages": [
-          "index"
-        ]
-      },
-      {
-        "group": "Looker Studio Integration",
-        "pages": [
-          "api-reference/introduction"
-        ]
-      }
-    ]
-  },
+  "anchors": [
+    { "anchor": "Get Started",
+          "icon": "play",
+          "pages": [
+            "getting-started/index",
+            "getting-started/introduction",
+            "getting-started/quick-start",
+             "index",
+             "api-reference/introduction"
+          ]
+        }
+      ]
+    },    
   "logo": {
     "light": "/images/logo-white.svg",
     "dark": "/images/logo-white.svg"
