@@ -13,10 +13,9 @@
     { "anchor": "Get Started",
           "icon": "play",
           "pages": [
-            "getting-started/index",
+            "index",
             "getting-started/introduction",
             "getting-started/quick-start",
-             "index",
              "api-reference/introduction"
           ]
         }
