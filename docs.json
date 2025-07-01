@@ -11,7 +11,7 @@
   "navigation": {
   "anchors": [
     { "anchor": "Get Started",
-          "icon": "rocket",
+          "icon": "zap",
           "pages": [
             "quick-start-introduction",
             "quick-start"
