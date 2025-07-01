@@ -14,7 +14,7 @@
           "icon": "rocket",
           "pages": [
             "index",
-            "introduction",
+            "quick-start-introduction",
             "quick-start"
           ]
         }
