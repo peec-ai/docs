@@ -13,8 +13,8 @@
     { "anchor": "Get Started",
           "icon": "rocket",
           "pages": [
-            "get-started/quick-start-introduction",
-            "get-started/quick-start"
+            "quick-start-introduction",
+            "quick-start"
           ]
         }
       ]
