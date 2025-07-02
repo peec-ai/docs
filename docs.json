@@ -13,8 +13,14 @@
     { "anchor": "Get Started",
           "icon": "rocket",
           "pages": [
-            "quick-start-introduction",
-            "quick-start"
+            "intro-to-peec-ai",
+            "quick-start",
+            "setting-up-your-prompts",
+            "adding-competitors",
+            "understanding-your-metrics",
+            "understanding-sources",
+            "understanding-your-dashboard",
+            "sidebar-navigation-overview"
           ]
         }
       ]
