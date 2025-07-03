@@ -27,7 +27,7 @@
     },    
   "logo": {
     "light": "/images/logo-white.svg",
-    "dark": "/images/logo-white.svg"
+    "dark": "/logo/PeecLogoWhite.png"
   },
   "navbar": {
     "links": [
