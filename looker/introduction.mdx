@@ -1,11 +1,11 @@
 ---
-title: 'Peec.ai Looker Studio Connector'
-description: 'Complete guide to connecting and using Peec.ai data in Looker Studio'
+title: 'Looker Studio Connector'
+description: 'Complete guide to connecting and using Peec AI data in Looker Studio'
 ---
 
-## What is the Peec.ai Looker Studio Connector?
+## What is the Peec AI Looker Studio Connector?
 
-The Peec.ai Looker Studio community connector is a powerful tool that allows you to import your AI search visibility data directly into Google Looker Studio (formerly Google Data Studio). This integration enables you to create custom dashboards, visualizations, and reports using your keyword performance data from AI search engines like ChatGPT, Perplexity, and Gemini.
+The Peec AI Looker Studio community connector is a powerful tool that allows you to import your AI search visibility data directly into Google Looker Studio (formerly Google Data Studio). This integration enables you to create custom dashboards, visualizations, and reports using your keyword performance data from AI search engines like ChatGPT, Perplexity, and Gemini.
 
 <Note>
 Looker Studio is Google's free data visualization tool that helps you turn your data into informative, easy-to-read, and shareable dashboards and reports.
@@ -15,8 +15,6 @@ Looker Studio is Google's free data visualization tool that helps you turn your 
 
 - **Real-time Data Access**: Connect directly to your Peec.ai workspace for up-to-date visibility metrics
 - **Custom Visualizations**: Create charts, graphs, and tables that match your reporting needs
-- **Advanced Filtering**: Filter by prompts, keywords, tags, models, and geographic regions
-- **Automated Reporting**: Set up scheduled reports and email delivery
 - **Team Collaboration**: Share dashboards with stakeholders and team members
 
 ---
@@ -29,17 +27,16 @@ Before you begin, ensure you have:
 
 - A Peec.ai account with access to at least one workspace
 - A Google account with access to Looker Studio
-- Your Peec.ai workspace ID (available in your Peec.ai dashboard)
 
 ### Step 1: Access the Connector
 
 1. Open [Looker Studio](https://lookerstudio.google.com)
 2. Click "**Create**" → "**Data source**"
-3. In the connector gallery, search for "**Peec.ai**"
+3. In the connector gallery, search for "**Peec AI**"
 4. Select the Peec.ai community connector
 
 <Warning>
-If you cannot find the Peec.ai connector in the gallery, contact [support@peec.ai](mailto:support@peec.ai) for access.
+If you cannot find the **Peec AI** connector in the gallery, contact [support@peec.ai](mailto:support@peec.ai) for questions regarding access.
 </Warning>
 
 ### Step 2: Authorize the Connection
@@ -52,46 +49,8 @@ If you cannot find the Peec.ai connector in the gallery, contact [support@peec.a
 
 ### Step 3: Configure Your Data Source
 
-After authorization, you'll see the connector configuration screen:
-
-#### Required Configuration
-
-**Workspace ID** (Required)
-- Enter your Peec.ai workspace ID
-- You can find this in your Peec.ai dashboard URL or settings
-
-**Date Range** (Required)
-- Looker Studio will automatically provide date range controls
-- The connector supports historical data based on your account limits
-
-#### Optional Filters
-
-Use these filters to narrow down your data:
-
-**Prompt IDs**
-- Enter comma-separated Prompt IDs to filter by specific prompts
-- Example: `prompt123,prompt456,prompt789`
-- Leave empty to include all prompts
-
-**Keyword IDs**
-- Enter comma-separated Keyword IDs to filter by specific keywords
-- Example: `keyword123,keyword456`
-- Leave empty to include all keywords
-
-**Tag IDs**
-- Enter comma-separated Tag IDs to filter by tags
-- Example: `tag123,tag456`
-- Useful for organizing keywords by categories
-
-**Model IDs**
-- Enter comma-separated Model IDs to filter by AI models
-- Example: `gpt-4,claude-3,gemini-pro`
-- Leave empty to include all models
-
-**Country Codes**
-- Enter comma-separated 2-letter country codes
-- Example: `US,GB,DE,FR`
-- Leave empty to include all countries
+After authorization, you'll see the connector configuration screen with the option to choose a Peec AI Workspace.
+You will also see the option to use the Workspaces as a parameter in the Reports. Checking this option grants you the ability to create reports that can switch between multiple Peec AI Workspaces.
 
 ### Step 4: Connect and Validate
 
@@ -103,25 +62,23 @@ Use these filters to narrow down your data:
 
 ## Available Data Fields
 
-The Peec.ai connector provides the following data fields:
+The Peec AI connector provides the following data fields:
 
 ### Dimensions
 
 | Field Name | Type | Description |
 |------------|------|-------------|
-| **keyword_id** | Text | Unique identifier for each keyword |
-| **keyword_text** | Text | The actual keyword text |
-| **date** | Date | Date of the visibility measurement |
+| **Brand** | Text | All the Brands that you have mentioned in Peec AI |
+| **Source: Domain** | Text | The Website Domains that the AI Models used while answering your prompts |
+| **Date** | Date | Date for all the Metrics |
 
 ### Metrics
 
 | Field Name | Type | Description |
 |------------|------|-------------|
-| **visibility** | Number | Visibility percentage (0-100) for the keyword on the specific date |
-
-<Info>
-The visibility metric represents how prominently your target content appears in AI search results for a given keyword, expressed as a percentage.
-</Info>
+| **Visibility** | Number | Visibility for the Brand on the specific date |
+| **Citations** | Number | Citation value for the **Source: Domain** on the specified Date |
+| **Chats** | Number | Number of Chats on the specified Date |
 
 ---
 
@@ -134,38 +91,11 @@ The visibility metric represents how prominently your target content appears in 
 
 ### Step 2: Add Visualizations
 
-**Time Series Chart**
-- Drag and drop a "Time series chart" from the toolbar
-- Set **Date Dimension**: `date`
-- Set **Metric**: `visibility`
-- This shows visibility trends over time
-
-**Table View**
-- Add a "Table" visualization
-- **Dimensions**: `keyword_text`, `date`
-- **Metrics**: `visibility`
-- Perfect for detailed keyword analysis
-
-**Scorecard**
-- Use "Scorecard" for key metrics
-- **Metric**: `visibility`
-- Apply filters for specific keywords or date ranges
+Looker Studio offers a wide range of Charts and Tables to fit your needs. Have a look at the [Types of Charts in Looker Studio](https://cloud.google.com/looker/docs/studio/types-of-charts-in-looker-studio) to get a better understanding of visualizing your data.
 
 ### Step 3: Apply Filters and Controls
 
-Add interactive controls to make your reports dynamic:
-
-**Date Range Control**
-- Allows users to change the time period
-- Automatically applied to all charts
-
-**Keyword Filter**
-- Add a dropdown control for `keyword_text`
-- Users can select specific keywords to analyze
-
-**Country Filter** (if using country codes)
-- Add dropdown for geographic filtering
-- Useful for multi-market analysis
+Add interactive controls to make your reports dynamic.
 
 ---
 
@@ -179,7 +109,7 @@ Add interactive controls to make your reports dynamic:
 - Check that your account has access to the workspace
 
 **"No Data Available"**
-- Verify your workspace ID is correct
+- Verify your Workspace is correct
 - Check that your date range includes data
 - Ensure your filters aren't too restrictive
 
@@ -188,8 +118,8 @@ Add interactive controls to make your reports dynamic:
 - Remove unnecessary filters
 - Contact support if the issue persists
 
-**"Invalid Workspace ID"**
-- Double-check your workspace ID in the Peec.ai dashboard
+**"Invalid Workspace"**
+- Double-check your workspace in the Peec.ai dashboard
 - Ensure you have access permissions to the workspace
 - Contact your account administrator if needed
 
@@ -201,27 +131,6 @@ If you encounter issues not covered here:
    - Description of the issue
    - Screenshots if applicable
 
-### Scheduling and Sharing
-
-**Automated Reports**
-- Set up scheduled email delivery
-- Choose frequency (daily, weekly, monthly)
-- Customize recipient lists
-
-**Sharing Options**
-- **View Access**: Recipients can interact with the report
-- **Edit Access**: Recipients can modify the report
-- **Link Sharing**: Generate shareable links with expiration dates
-
 ---
-
-## Next Steps
-
-Now that you've set up the Peec.ai Looker Studio connector:
-
-1. **Explore Templates**: Check if Peec.ai provides pre-built dashboard templates
-2. **Join the Community**: Connect with other users for tips and best practices
-3. **Feedback**: Share your experience and feature requests with our team
-4. **Advanced Training**: Consider Looker Studio certification for advanced features
 
 For more advanced use cases and enterprise features, contact [sales@peec.ai](mailto:sales@peec.ai).
