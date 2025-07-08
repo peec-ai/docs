@@ -1,14 +1,14 @@
 ---
-title: 'Looker Studio connector'
-description: 'Complete guide to connecting and using Peec AI data in Looker Studio'
+title: "Looker Studio connector"
+description: "Complete guide to connecting and using Peec AI data in Looker Studio."
 ---
 
-## What is the Peec AI Looker Studio Connector?
+## What is the Peec AI Looker Studio connector?
 
 The Peec AI Looker Studio community connector lets you import your AI search visibility data directly into [Google Looker Studio](https://lookerstudio.google.com/). You can then create custom dashboards and reports using your brand performance data from AI search engines like ChatGPT, Perplexity, and Gemini.
 
 <Note>
-Looker Studio is Google's free data visualization tool that helps you turn your data into informative, easy-to-read, and shareable dashboards and reports.
+  Looker Studio is Google's free data visualization tool that helps you turn your data into informative, easy-to-read, and shareable dashboards and reports.
 </Note>
 
 ## How this helps
@@ -16,8 +16,6 @@ Looker Studio is Google's free data visualization tool that helps you turn your 
 - **Real-time data access**: connect directly to your Peec AI workspace for up-to-date visibility metrics
 - **Custom visualizations**: create charts, graphs, and tables that match your reporting needs
 - **Team collaboration**: share dashboards with stakeholders and team members
-
----
 
 ## How to set up the connector
 
@@ -30,36 +28,35 @@ Before you begin, ensure you have:
 
 ### Step 1: Access the connector
 
-1. Open [Looker Studio](https://lookerstudio.google.com)
-2. Use [the Peec AI connector](https://datastudio.google.com/datasources/create?connectorId=AKfycbxpfq1Ku0lxihm5bCPpx7fF7knhKjSnsnhwoFDQfLhIsqx1vYCN1mPBLLbVc1eg7Vlm&authuser=0)
+1. Open [Looker Studio](https://lookerstudio.google.com).
+2. Click **Create** → **Data Source.**
+3. Enter your basic info and complete account setup.
+4. In the connector gallery, search for "Peec AI".
 
 <Warning>
-If you find that you have problems with the Peec AI connector, please [mail us](mailto:support@peec.ai) and we can sort this out together.
+  If you can't find the Peec AI connector in the gallery or encounter other issues, contact us at [support@peec.ai](mailto:support@peec.ai)
 </Warning>
 
 ### Step 2: Authorize the connection
 
-1. Click "**AUTHORIZE**" to begin the OAuth2 authentication process
-2. You'll be redirected to Google's authorization page
-3. Sign in with your Google account if prompted
-4. Grant the necessary permissions to the connector
-5. You'll be redirected back to Looker Studio once authorization is complete
-6. You will then be asked for a second authorization step which gives permission to the connector to access your data in the Peec AI system.
-7. Click on the **AUTHORIZE** button and it will take you to the Peec AI Looker Authenticator page where you will be asked to connect with your Peec AI Google account.
-8. Continue with the authorization process and on success you will be asked to close the Peec AI Looker Authenticator page to continue with the authorization process. Close the specific window / tab and go back to the window where you have your Looker Studio opened. Looker studio will then try and connect to the Peec AI system to retrieve your data.
+1. Click **AUTHORIZE** to begin the OAuth2 authentication process.
+2. You'll be redirected to Google's authorization page.
+3. Sign in with your Google account if prompted.
+4. Grant the necessary permissions to the connector.
+5. You'll be redirected back to Looker Studio once authorization is complete.
 
 ### Step 3: Configure your data source
+
+After authorization, you'll see the connector configuration screen:
 
 1. Choose which Peec AI workspace to connect.
 2. If you want to create reports that can switch between multiple Peec AI Workspaces, select the option to use Workspaces as a parameter in Reports.
 
 ### Step 4: Connect and validate
 
-1. Click "**CONNECT**" to establish the connection
-2. The connector will validate your configuration and fetch sample data
-3. You'll see the available fields that can be used in your reports
-
----
+1. Click **CONNECT** to establish the connection.
+2. The connector will validate your configuration and fetch sample data.
+3. You'll see the available fields that can be used in your reports.
 
 ## Available data fields
 
@@ -67,30 +64,28 @@ The Peec AI connector provides the following data fields:
 
 ### Dimensions
 
-| Field Name | Type | Description |
-|------------|------|-------------|
-| **Brand** | Text | All the Brands that you have mentioned in Peec AI |
+| Field Name         | Type | Description                                                              |
+| ------------------ | ---- | ------------------------------------------------------------------------ |
+| **Brand**          | Text | All the Brands that you have mentioned in Peec AI                        |
 | **Source: Domain** | Text | The Website Domains that the AI Models used while answering your prompts |
-| **Date** | Date | Date for all the Metrics |
+| **Date**           | Date | Date for all the Metrics                                                 |
 
 ### Metrics
 
-| Field Name | Type | Description |
-|------------|------|-------------|
-| **Chats** | Number | Number of Chats on the specified Date |
-| **Citations** | Number | Citation value for the **Source: Domain** on the specified Date |
-| **Position** | Number | The Position of Brands on a specified Date |
-| **Sentiment** | Number | The Sentiment of Brands on a specified Date |
-| **Visibility** | Number | Visibility for Brands on the specific Date |
-
----
+| Field Name     | Type   | Description                                                     |
+| -------------- | ------ | --------------------------------------------------------------- |
+| **Chats**      | Number | Number of Chats on the specified Date                           |
+| **Citations**  | Number | Citation value for the **Source: Domain** on the specified Date |
+| **Position**   | Number | The Position of Brands on a specified Date                      |
+| **Sentiment**  | Number | The Sentiment of Brands on a specified Date                     |
+| **Visibility** | Number | Visibility for Brands on the specific Date                      |
 
 ## Creating your first report
 
 ### Step 1: Create a new report
 
-1. After configuring your data source, click "**CREATE REPORT**"
-2. Looker Studio will open the report editor with your Peec.ai data source connected
+1. After configuring your data source, click **CREATE REPORT**.
+2. Looker Studio will open the report editor with your Peec AI data source connected.
 
 ### Step 2: Add visualizations
 
@@ -100,39 +95,41 @@ Looker Studio offers a wide range of charts and tables to fit your needs. Have a
 
 Add interactive controls to make your reports dynamic.
 
----
-
 ## Troubleshooting
 
 ### Common issues
 
 **"Authorization Failed"**
-- Ensure you're using the correct Google account
-- Clear browser cache and try again
-- Check that your account has access to the workspace
+
+- Ensure you're using the correct Google account.
+- Clear browser cache and try again.
+- Check that your account has access to the Peec AI Workspace.
 
 **"No Data Available"**
-- Verify your Workspace is correct
-- Check that your date range includes data
-- Ensure your filters aren't too restrictive
+
+- Verify you've selected the correct Peec AI Workspace.
+- Check that your date range includes data.
+- Ensure your filters aren't too restrictive.
 
 **"Connection Timeout"**
-- Try reducing the date range
-- Remove unnecessary filters
-- Contact support if the issue persists
+
+- Try reducing the date range.
+- Remove unnecessary filters.
+- Contact support if the issue persists.
 
 **"Invalid Workspace"**
-- Double-check your workspace in the Peec AI dashboard
-- Ensure you have access permissions to the workspace
-- Contact your account administrator if needed
 
-### Getting Help
+- Ensure you have access permissions to the Peec AI workspace.
+- Contact your Peec AI account administrator if needed.
+
+### Getting help
 
 If you encounter issues not covered here:
 
-1. **Contact support**: Email [support@peec.ai](mailto:support@peec.ai) with:
-   - Description of the issue
-   - Screenshots if applicable
+**Contact support**: Email [support@peec.ai](mailto:support@peec.ai) with:
+
+- Description of the issue
+- Screenshots if applicable
 
 ---
 
