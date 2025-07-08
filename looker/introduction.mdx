@@ -1,58 +1,59 @@
 ---
-title: 'Looker Studio Connector'
+title: 'Looker Studio connector'
 description: 'Complete guide to connecting and using Peec AI data in Looker Studio'
 ---
 
 ## What is the Peec AI Looker Studio Connector?
 
-The Peec AI Looker Studio community connector is a powerful tool that allows you to import your AI search visibility data directly into Google Looker Studio (formerly Google Data Studio). This integration enables you to create custom dashboards, visualizations, and reports using your keyword performance data from AI search engines like ChatGPT, Perplexity, and Gemini.
+The Peec AI Looker Studio community connector lets you import your AI search visibility data directly into [Google Looker Studio](https://lookerstudio.google.com/). You can then create custom dashboards and reports using your brand performance data from AI search engines like ChatGPT, Perplexity, and Gemini.
 
 <Note>
 Looker Studio is Google's free data visualization tool that helps you turn your data into informative, easy-to-read, and shareable dashboards and reports.
 </Note>
 
-## Key Benefits
+## How this helps
 
-- **Real-time Data Access**: Connect directly to your Peec.ai workspace for up-to-date visibility metrics
-- **Custom Visualizations**: Create charts, graphs, and tables that match your reporting needs
-- **Team Collaboration**: Share dashboards with stakeholders and team members
+- **Real-time data access**: connect directly to your Peec AI workspace for up-to-date visibility metrics
+- **Custom visualizations**: create charts, graphs, and tables that match your reporting needs
+- **Team collaboration**: share dashboards with stakeholders and team members
 
 ---
 
-## How to Set Up the Connector
+## How to set up the connector
 
-### Prerequisites
+### What you need
 
 Before you begin, ensure you have:
 
-- A Peec.ai account with access to at least one workspace
+- A Peec AI account with access to at least one workspace
 - A Google account with access to Looker Studio
 
-### Step 1: Access the Connector
+### Step 1: Access the connector
 
 1. Open [Looker Studio](https://lookerstudio.google.com)
-2. Click "**Create**" → "**Data source**"
-3. In the connector gallery, search for "**Peec AI**"
-4. Select the Peec.ai community connector
+2. Use [the Peec AI connector](https://datastudio.google.com/datasources/create?connectorId=AKfycbxpfq1Ku0lxihm5bCPpx7fF7knhKjSnsnhwoFDQfLhIsqx1vYCN1mPBLLbVc1eg7Vlm&authuser=0)
 
 <Warning>
-If you cannot find the **Peec AI** connector in the gallery, contact [support@peec.ai](mailto:support@peec.ai) for questions regarding access.
+If you find that you have problems with the Peec AI connector, please [mail us](mailto:support@peec.ai) and we can sort this out together.
 </Warning>
 
-### Step 2: Authorize the Connection
+### Step 2: Authorize the connection
 
 1. Click "**AUTHORIZE**" to begin the OAuth2 authentication process
 2. You'll be redirected to Google's authorization page
 3. Sign in with your Google account if prompted
 4. Grant the necessary permissions to the connector
 5. You'll be redirected back to Looker Studio once authorization is complete
+6. You will then be asked for a second authorization step which gives permission to the connector to access your data in the Peec AI system.
+7. Click on the **AUTHORIZE** button and it will take you to the Peec AI Looker Authenticator page where you will be asked to connect with your Peec AI Google account.
+8. Continue with the authorization process and on success you will be asked to close the Peec AI Looker Authenticator page to continue with the authorization process. Close the specific window / tab and go back to the window where you have your Looker Studio opened. Looker studio will then try and connect to the Peec AI system to retrieve your data.
 
-### Step 3: Configure Your Data Source
+### Step 3: Configure your data source
 
-After authorization, you'll see the connector configuration screen with the option to choose a Peec AI Workspace.
-You will also see the option to use the Workspaces as a parameter in the Reports. Checking this option grants you the ability to create reports that can switch between multiple Peec AI Workspaces.
+1. Choose which Peec AI workspace to connect.
+2. If you want to create reports that can switch between multiple Peec AI Workspaces, select the option to use Workspaces as a parameter in Reports.
 
-### Step 4: Connect and Validate
+### Step 4: Connect and validate
 
 1. Click "**CONNECT**" to establish the connection
 2. The connector will validate your configuration and fetch sample data
@@ -60,7 +61,7 @@ You will also see the option to use the Workspaces as a parameter in the Reports
 
 ---
 
-## Available Data Fields
+## Available data fields
 
 The Peec AI connector provides the following data fields:
 
@@ -76,24 +77,26 @@ The Peec AI connector provides the following data fields:
 
 | Field Name | Type | Description |
 |------------|------|-------------|
-| **Visibility** | Number | Visibility for the Brand on the specific date |
-| **Citations** | Number | Citation value for the **Source: Domain** on the specified Date |
 | **Chats** | Number | Number of Chats on the specified Date |
+| **Citations** | Number | Citation value for the **Source: Domain** on the specified Date |
+| **Position** | Number | The Position of Brands on a specified Date |
+| **Sentiment** | Number | The Sentiment of Brands on a specified Date |
+| **Visibility** | Number | Visibility for Brands on the specific Date |
 
 ---
 
-## Creating Your First Report
+## Creating your first report
 
-### Step 1: Create a New Report
+### Step 1: Create a new report
 
 1. After configuring your data source, click "**CREATE REPORT**"
 2. Looker Studio will open the report editor with your Peec.ai data source connected
 
-### Step 2: Add Visualizations
+### Step 2: Add visualizations
 
-Looker Studio offers a wide range of Charts and Tables to fit your needs. Have a look at the [Types of Charts in Looker Studio](https://cloud.google.com/looker/docs/studio/types-of-charts-in-looker-studio) to get a better understanding of visualizing your data.
+Looker Studio offers a wide range of charts and tables to fit your needs. Have a look at the [Types of Charts in Looker Studio](https://cloud.google.com/looker/docs/studio/types-of-charts-in-looker-studio) for more options.
 
-### Step 3: Apply Filters and Controls
+### Step 3: Apply filters and controls
 
 Add interactive controls to make your reports dynamic.
 
@@ -101,7 +104,7 @@ Add interactive controls to make your reports dynamic.
 
 ## Troubleshooting
 
-### Common Issues
+### Common issues
 
 **"Authorization Failed"**
 - Ensure you're using the correct Google account
@@ -119,7 +122,7 @@ Add interactive controls to make your reports dynamic.
 - Contact support if the issue persists
 
 **"Invalid Workspace"**
-- Double-check your workspace in the Peec.ai dashboard
+- Double-check your workspace in the Peec AI dashboard
 - Ensure you have access permissions to the workspace
 - Contact your account administrator if needed
 
@@ -127,7 +130,7 @@ Add interactive controls to make your reports dynamic.
 
 If you encounter issues not covered here:
 
-1. **Contact Support**: Email [support@peec.ai](mailto:support@peec.ai) with:
+1. **Contact support**: Email [support@peec.ai](mailto:support@peec.ai) with:
    - Description of the issue
    - Screenshots if applicable
 
