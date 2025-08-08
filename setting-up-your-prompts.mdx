@@ -42,6 +42,27 @@ Click **Add** in the top-right of the Prompts page. You can:
 
 ![Peec AI LLM Search Brand Visibility 2 A Gi](/images/Peec-AI-LLM-search-brand-visibility-2-a.gif)
 
+### 3. Upload prompts via CSV
+
+You can bulk import prompts by uploading a CSV file.
+
+To do so, click **Bulk** **Add** in the top-right of the Prompts page, right next to the **Add** button.
+
+- Click anywhere in the upload box to open a system upload dialog or just drag-&-drop your CSV into the box
+- Confirm that the preview follows your desired structure
+
+Any imported prompts will appear in your **Active prompts** tab and start running right away before being added to the the regular 24-hour cycle.
+
+Your CSV file should be comma- or semicolon-separated and follow this format:
+
+- **Row 1:** Header row for naming your columns. It is ignored during import.
+- **Column 1:** Prompt text (one per row, max 200 characters)
+- **Column 2:** Location, using [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements) two-letter country codes (e.g. `US`, `DE`).
+  - If this is blank or invalid, your workspace’s default location is used.
+- **Columns 3-n:** Tags to assign to each prompt. Add as many as you need.
+  - If you add text to a cell, we will add it as a tag to the prompt
+  - We recommend using one column per tag.
+
 **Note:** Each prompt can be up to 200 characters. When adding multiple prompts, the counter shows the length of your longest prompt.
 
 If your desired country isn't available, contact us and we'll add it in the next update.
